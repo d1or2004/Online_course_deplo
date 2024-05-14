@@ -229,7 +229,7 @@ class ArtistSetAPIView(ModelViewSet):
 class CommentSetAPIView(ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     # authentication_classes = (TokenAuthentication,)
     filter_backends = (filters.SearchFilter,)
     # search_fields = ('title',)
@@ -241,7 +241,7 @@ class CommentSetAPIView(ModelViewSet):
 class BlogSetAPIView(ModelViewSet):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     # authentication_classes = (TokenAuthentication,)
     filter_backends = (filters.SearchFilter,)
     # search_fields = ('title',)
@@ -254,7 +254,7 @@ class SpecialitySetAPIView(ModelViewSet):
     queryset = Speciality.objects.all()
     serializer_class = SpecialitySerializer
     # permission_classes = (IsAuthenticated,)
-    # authentication_classes = (TokenAuthentication,)
+    authentication_classes = (TokenAuthentication,)
     filter_backends = (filters.SearchFilter,)
     # search_fields = ('title',)
     # search_fields = ('^title')
@@ -265,7 +265,7 @@ class SpecialitySetAPIView(ModelViewSet):
 class CourseSetAPIView(ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     # authentication_classes = (TokenAuthentication,)
     filter_backends = (filters.SearchFilter,)
     # search_fields = ('title',)
@@ -277,7 +277,7 @@ class CourseSetAPIView(ModelViewSet):
 class PositionSetAPIView(ModelViewSet):
     queryset = Position.objects.all()
     serializer_class = PositionSerializer
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     # authentication_classes = (TokenAuthentication,)
     filter_backends = (filters.SearchFilter,)
     # search_fields = ('name',)
@@ -289,7 +289,7 @@ class PositionSetAPIView(ModelViewSet):
 class TeacherSetAPIView(ModelViewSet):
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     # authentication_classes = (TokenAuthentication,)
     filter_backends = (filters.SearchFilter,)
     # search_fields = ('first_name',)
